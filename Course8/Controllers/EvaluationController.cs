@@ -15,7 +15,7 @@ namespace Course8.Controllers
             {
 
                 Name="Mateescu",
-                City = "<script>alert('xss');</script>",
+                City = "Oradea",
                 Country = "Romania",
                 Rating = 7
             },
