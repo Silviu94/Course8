@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "EvLayout";
+}
+
+<h2>EvaluationLayout</h2>
+<body>
+    @RenderSection("test",required:false)
+
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Evaluation","Index","Evaluation")</li>
+
+    </ul>
+    @Html.Partial("_LoginPartial")
+</div>
+    
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.ToShortDateString(), - Olariu Silviu</p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
