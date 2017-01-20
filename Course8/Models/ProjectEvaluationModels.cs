@@ -7,10 +7,12 @@ namespace Course8.Models
 {
     public class ProjectEvaluationModels
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
         public double Rating { get; set; }
+
 
     }
 }

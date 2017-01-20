@@ -14,11 +14,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@foreach(var item in Model)
+@foreach (var item in Model)
 {
     <div>
         <h4>@item.Name</h4>
         <span>@item.Rating</span>
         <p>@item.City,@item.Country</p>
+        <span>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</span>
     </div>
 }

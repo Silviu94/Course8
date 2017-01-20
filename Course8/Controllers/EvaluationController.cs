@@ -13,7 +13,7 @@ namespace Course8.Controllers
         {
             new ProjectEvaluationModels()
             {
-
+                Id=1,
                 Name="Mateescu",
                 City = "Oradea",
                 Country = "Romania",
@@ -22,7 +22,7 @@ namespace Course8.Controllers
 
             new ProjectEvaluationModels()
             {
-                
+                Id=2,
                 Name ="Popescu",
                 City = "Cluj-Napoca",
                 Country = "Romania",
@@ -31,7 +31,7 @@ namespace Course8.Controllers
 
             new ProjectEvaluationModels()
             {
-                
+                Id=3,
                 Name = "Hanganu",
                 City = "Pitesti",
                 Country = "Romania",
@@ -82,16 +82,20 @@ namespace Course8.Controllers
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add update logic here
+            var evaluation = listOfObjects.Single(e => e.Id == id);
+            if(TryUpdateModel(evaluation))
+            { return RedirectToAction("Index");}
+            return View(evaluation);
+        //    try
+        //    {
+        //        // TODO: Add update logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
         }
 
         // GET: Evaluation/Delete/5
