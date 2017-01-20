@@ -10,7 +10,7 @@ namespace Course8.Models
         public string Name { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public int Rating { get; set; }
+        public double Rating { get; set; }
 
     }
 }
