@@ -86,16 +86,16 @@ namespace Course8.Controllers
             if(TryUpdateModel(evaluation))
             { return RedirectToAction("Index");}
             return View(evaluation);
-        //    try
-        //    {
-        //        // TODO: Add update logic here
+            //try
+            //{
+            //    // TODO: Add update logic here
 
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
+            //    return RedirectToAction("Index");
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
         // GET: Evaluation/Delete/5
